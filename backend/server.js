@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 
 const app = express();
 const db = new sqlite3.Database('./database.sqlite');
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const SECRET = 'c33c591ce7fc4b1b2495fc383eac573bbd3812a46f3db3c99ec46ac31bf51171';
 
 app.use(cors());

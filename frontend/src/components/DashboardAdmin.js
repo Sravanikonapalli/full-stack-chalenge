@@ -205,7 +205,8 @@ export default function DashboardAdmin({ onLogout }) {
         <ul>
           {filteredStores.map(store => (
             <li key={store.id} className="border-b p-2">
-              {store.name} - {store.email} - {store.address} - Rating: {store.average_rating || 'N/A'}
+                <img src={store.image_url} alt={store.name} className="w-32 h-32 object-cover" />
+              {store.name} - {store.email} - {store.address} 
             </li>
           ))}
         </ul>

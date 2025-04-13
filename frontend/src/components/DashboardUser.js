@@ -123,6 +123,7 @@ export default function DashboardUser({ onLogout }) {
                 <h3 className="text-lg font-semibold">{store.name}</h3>
                 <p>{store.email}</p>
                 <p>{store.address}</p>
+                <img src={store.image_url} alt={store.name} className="w-32 h-32 object-cover" />
                 <p><strong>Overall Rating:</strong> {store.averageRating || 'N/A'}</p>
                 <p>
                   <strong>Your Rating:</strong>{' '}
