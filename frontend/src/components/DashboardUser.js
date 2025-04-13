@@ -21,7 +21,7 @@ export default function DashboardUser({ onLogout }) {
        };
   
       try {
-        const response = await fetch('http://localhost:3001/api/user/stores', { headers }); 
+        const response = await fetch('https://full-stack-chalenge.onrender.com/api/user/stores', { headers }); 
         if (!response.ok) throw new Error(`Store fetch failed: ${response.statusText}`);
   
         const data = await response.json();
@@ -51,7 +51,7 @@ export default function DashboardUser({ onLogout }) {
 
   const handleRatingSubmit = async (storeId, rating) => {
     try {
-      const response = await fetch(`http://localhost:3001/api/ratings/${storeId}`, {
+      const response = await fetch(`https://full-stack-chalenge.onrender.com/api/ratings/${storeId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ export default function DashboardUser({ onLogout }) {
   const handlePasswordChange = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('http://localhost:3001/api/auth/change-password', {
+    const response = await fetch('https://full-stack-chalenge.onrender.com/api/auth/change-password', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

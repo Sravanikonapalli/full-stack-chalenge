@@ -8,7 +8,7 @@ export default function DashboardAdmin({ onLogout }) {
   const [filter, setFilter] = useState({ name: '', email: '', address: '', role: '' });
   const [summary, setSummary] = useState({ total_users: 0, total_stores: 0, total_ratings: 0 });
 
-  const backendUrl = 'http://localhost:3001';
+  const backendUrl = 'https://full-stack-chalenge.onrender.com';
 
   useEffect(() => {
     const fetchData = async () => {

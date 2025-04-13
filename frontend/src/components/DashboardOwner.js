@@ -10,7 +10,7 @@ export default function DashboardOwner({ onLogout }) {
   useEffect(() => {
     const fetchStoreData = async () => {
       try {
-        const storeResponse = await fetch('http://localhost:3001/api/store/my-store', {
+        const storeResponse = await fetch('https://full-stack-chalenge.onrender.com/api/store/my-store', {
           headers: {
             // Sends the authentication token to identify the store owner
             Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -37,7 +37,7 @@ export default function DashboardOwner({ onLogout }) {
     setPasswordChangeSuccess(false);
 
     try {
-        const response = await fetch('http://localhost:3001/api/auth/change-password', {
+        const response = await fetch('https://full-stack-chalenge.onrender.com/api/auth/change-password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
